@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<section>
+
+    {% for post in paginator.posts %}
+    {% unless post.next %}
+    <h3>{{ post.date | date: '%Y' }} &#172;</h3>
+    {% else %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+    {% if year != nyear %}
+    <h3>{{ post.date | date: '%Y' }} &#172;</h3>
+    {% endif %}
+    {% endunless %}
+
+    <ul>
+        <li>
+            <div class="post-date">
+                <span>{{ post.date | date: "%b %d" }}</span>
+            </div>
+            <div class="title">
+                <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+            </div>
+        </li>
+    </ul>
+
+    {% endfor %}
+
+    <!-- 分页链接 -->
+    <div class="page-navigation">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">Previous</a>
+        {% else %}
+        <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
+        <span class="previous disable"><i class="fa fa-angle-left"></i></span>
+        {% endif %}
+        <span class="page_number ">{{ paginator.page }}/{{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path  | prepend: site.baseurl }}" class="next">Next</a>
+        {% else %}
+        <span class="next disable"><i class="fa fa-angle-right"></i></span>
+        <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
+        {% endif %}
+    </div>
+    </div>
+</section>
