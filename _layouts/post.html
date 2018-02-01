@@ -17,7 +17,7 @@ layout: default
     {{ content }}
     </div>
 
-<div class="tagged">
+
     {% assign post = page %}
 		{% if post.tags.size > 0 %}
 
@@ -34,11 +34,7 @@ layout: default
 		</div>
 	{% endif %}
 
-  {% if site.disqus_enabled %}
-    {% include disqus.html %}
-  {% endif %}
-
-</div>
+  
 
 
 </article>
