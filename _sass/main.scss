@@ -397,3 +397,33 @@ section {
     -webkit-transform: none;
   }
 }
+.tag-cloud {
+    margin-bottom: 20px;
+
+    a.tag-anchor {
+        margin-right: 4px;
+        margin-bottom: 8px;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: inline-block;
+        background: #f0f0f0;
+        color: #444;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px
+    }
+    a.tag-anchor:active,
+    a.tag-anchor:focus,
+    a.tag-anchor:hover {
+        background: #069;
+        color: #fff;
+    }
+}
+
+.tag-cloud-small {
+  a.tag-anchor {
+    font-size: 80%;
+  }
+}
