@@ -6,10 +6,10 @@ google_analytics:   UA-98623479-1 # Put your Google Analytics code
 
 # Author Info
 author_name:        "夙兴夜寐" # Your name here
-author_email:       wscrlhs@gmail.com # Your email here
+author_email:       wscrlhs@gmail.com  # Your email here
 author_gravatar:    2b38b1b0e7e08b69379bd61582adf0c8 # Your Gravatar md5 hash here for logo
 twitter_username:   #HeiswayiNrird # Your Twitter username here
-github_username:    wscrlhs# Your GitHub username here
+github_username:    wscrlhs #Your GitHub username here
 
 # Site Settings
 url:                http://zhoufuyeben.com # main url
