@@ -7,7 +7,8 @@ layout: default
         <h1>{{ page.title }}</h1>
 
         {% if page.author %}
-        <div class="author">作者: {{ page.author }}</div>
+        <div class="author">作者: <a href="{{ site.url }}{{ site.baseurl }}/tagged#{{ page.author }}">{{ page.author }}</a>
+       </div>
         {% endif %}
         <time>{{ page.date | date: '%B %-d, %Y' }}</time>
     </div>
@@ -16,26 +17,6 @@ layout: default
     <div style="text-align: center;  ">
     {{ content }}
     </div>
-
-
-    {% assign post = page %}
-		{% if post.tags.size > 0 %}
-
-		{% assign tags_content = "" %}
-		{% for post_tag in post.tags %}
-			{% capture tags_content_temp %}
-				{{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tagged#{{ post_tag | slugify }}"><i class="fa fa-hashtag muted" aria-hidden="true"></i>{{ post_tag }}</a>
-			{% endcapture %}
-			{% assign tags_content = tags_content_temp %}
-		{% endfor %}
-
-    <div class="tagged">
-			{{ tags_content }}
-		</div>
-	{% endif %}
-
-  
-
 
 </article>
 
