@@ -3,6 +3,7 @@ layout: default
 title: Tagged
 ---
 
+<section>
 {% assign rawtags = "" %}
 {% for post in site.posts %}
 	{% assign ttags = post.tags | join:'|' | append:'|' %}
@@ -70,3 +71,5 @@ title: Tagged
 </div>
 
 <hr/>
+
+</section>
