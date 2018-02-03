@@ -14,6 +14,7 @@ github_username:    wscrlhs #Your GitHub username here
 # Site Settings
 url:                http://zhoufuyeben.com # main url
 baseurl:            /collection-poems # for gh-pages
+blog_url:           http://zhoufuyeben.com # main blog url
 permalink:          /poems/:title # Post permalink
 timezone:           Asia/Shanghai # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            true  # enables support for mathjax - set to false to disable
